@@ -1,5 +1,5 @@
 /* Cache the app shell only. Outfit / pose / face images are served from local atlas/. */
-var VERSION = 'yijian-huanzhuang-v4';
+var VERSION = 'yijian-huanzhuang-v5';
 var SHELL = [
   './',
   './index.html',

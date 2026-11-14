@@ -28,10 +28,10 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-html { height: 100%; background: var(--bg-deep); }
+html { height: 100%; overflow: hidden; background: var(--bg-deep); }
 body {
-  min-height: 100%;
-  min-height: 100dvh;
+  height: 100%;
+  overflow: hidden;
   font-family: var(--font);
   color: var(--cream);
   background: var(--bg-deep);
@@ -56,8 +56,8 @@ a:hover { color: var(--gold-2); }
 #app {
   width: 100%;
   max-width: 480px;
-  min-height: 100dvh;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   background:
     radial-gradient(1200px 420px at 50% -80px, rgba(214, 176, 112, 0.08), transparent 60%),
     var(--bg);
@@ -113,7 +113,8 @@ a:hover { color: var(--gold-2); }
 
 /* ---------- Main / panels ---------- */
 #main {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
   padding-bottom: calc(var(--tab-h) + var(--safe-bottom) + 18px);
