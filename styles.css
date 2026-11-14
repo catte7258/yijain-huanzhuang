@@ -672,3 +672,6 @@ a:hover { color: var(--gold-2); }
 }
 .site-footer p { margin: 0 0 6px; }
 .site-footer a { color: var(--gold-dim); }
+
+.btn-compose { display: block; width: 100%; margin-top: 12px; }
+.combo-hint { margin: 8px 2px 0; font-size: 12px; opacity: .7; line-height: 1.5; }

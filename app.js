@@ -819,6 +819,16 @@
       if (!state.showAll && ADULT_CATS.indexOf(state.cat) !== -1) state.cat = '';
       onFilterChange();
     });
+    $('btn-compose').addEventListener('click', function () {
+      var links = officialLinks();
+      var pose = currentPose();
+      var face = currentFace();
+      var text = '图鉴画师，帮我出一张合成图：\n' +
+        '姿势：' + pose.id + '（' + pose.name + '，' + angleName(state.angle) + '） ' + links.pose + '\n' +
+        '衣服：' + state.outfitId + ' ' + links.costume + '\n' +
+        '脸型：' + face.id + ' ' + links.face;
+      copyText(text, '已复制组合，粘贴发给图鉴画师就能出图');
+    });
     $('btn-copy-all').addEventListener('click', function () {
       var l = officialLinks();
       var text = '当前组合（素材来自 RuiC-PoseAtlas）\n姿势：' + l.pose + '\n衣装：' + l.costume + '\n脸型：' + l.face;
